@@ -8,6 +8,9 @@ export function Footer() {
         <div className="text-xs tracking-wider">
           © {new Date().getFullYear()} · Terapia Holística & Tarot Cigano · Todos os direitos reservados
         </div>
+        <div className="text-xs tracking-wider">
+          Desenvolvido por <span className="text-gold">Sebastião Carvalho</span>
+        </div>
       </div>
     </footer>
   );
