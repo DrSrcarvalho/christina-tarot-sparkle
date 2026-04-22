@@ -27,7 +27,7 @@ export function Hero() {
       <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center text-center gap-8 animate-float-up">
         <div className="flex items-center gap-4 text-gold/80 text-[11px] md:text-xs font-medium tracking-[0.25em] uppercase">
           <span className="w-10 md:w-16 h-px bg-gradient-to-r from-transparent to-gold/60" />
-          <span>Intuição & Ancestralidade Romani</span>
+          <span>Intuição & Sabedoria Ancestral</span>
           <span className="w-10 md:w-16 h-px bg-gradient-to-l from-transparent to-gold/60" />
         </div>
 
