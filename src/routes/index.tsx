@@ -8,6 +8,7 @@ import { Testimonials } from "@/components/site/Testimonials";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
+import { FloatingCandles } from "@/components/site/FloatingCandles";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,6 +34,7 @@ function Index() {
   return (
     <div className="bg-obsidian text-silk min-h-screen scroll-smooth">
       <Header />
+      <FloatingCandles />
       <main>
         <Hero />
         <About />
