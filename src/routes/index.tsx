@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Há 20 anos guiando jornadas com Tarot Cigano e terapia holística. Atendimento presencial e online. Agende pelo WhatsApp (11) 99950-4256.",
+          "Há 20 anos guiando jornadas com Tarot Cigano e terapia holística. Atendimento 100% online. Agende pelo WhatsApp (11) 99950-4256.",
       },
       { property: "og:title", content: "Cristina Patricia Russo · Terapeuta Holística & Tarot Cigano" },
       {
