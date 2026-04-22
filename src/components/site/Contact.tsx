@@ -20,7 +20,7 @@ export function Contact() {
         </h2>
         <p className="text-silk/75 text-lg font-light max-w-[55ch] mx-auto mb-12">
           Entre em contato pelo WhatsApp para conhecer os horários disponíveis e agendar seu
-          atendimento — presencial ou online.
+          atendimento online.
         </p>
 
         <a
@@ -49,7 +49,7 @@ export function Contact() {
           <div className="border-l border-gold/30 pl-5">
             <MapPin className="size-4 text-gold mb-3" />
             <div className="text-[10px] tracking-[0.25em] uppercase text-silk/60 mb-1">Modalidade</div>
-            <div className="font-serif text-xl text-silk">Presencial & Online</div>
+            <div className="font-serif text-xl text-silk">Atendimento Online</div>
           </div>
         </div>
       </div>
