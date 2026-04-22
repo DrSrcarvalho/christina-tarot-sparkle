@@ -44,7 +44,7 @@ export function Contact() {
           <div className="border-l border-gold/30 pl-5">
             <Clock className="size-4 text-gold mb-3" />
             <div className="text-[10px] tracking-[0.25em] uppercase text-silk/60 mb-1">Atendimento</div>
-            <div className="font-serif text-xl text-silk">Seg a Sáb · 9h às 20h</div>
+            <div className="font-serif text-xl text-silk">Seg a Sáb · 9h às 19h</div>
           </div>
           <div className="border-l border-gold/30 pl-5">
             <MapPin className="size-4 text-gold mb-3" />

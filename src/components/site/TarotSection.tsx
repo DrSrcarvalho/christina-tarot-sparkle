@@ -37,7 +37,7 @@ export function TarotSection() {
         <div ref={txt.ref} className={`lg:order-1 reveal reveal-delay-1 ${txt.visible ? "is-visible" : ""}`}>
           <div className="flex items-center gap-4 mb-6">
             <span className="w-10 h-px bg-gold/60" />
-            <span className="text-[11px] tracking-[0.3em] uppercase text-gold">Tradição Romani</span>
+            <span className="text-[11px] tracking-[0.3em] uppercase text-gold">Tradição Ancestral</span>
           </div>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-silk leading-[1.1] mb-8">
             O Baralho Cigano <i className="text-ember font-normal">não mente.</i>
