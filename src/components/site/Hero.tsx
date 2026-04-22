@@ -3,6 +3,11 @@ import heroImg from "@/assets/hero-tarot.jpg";
 const PHONE = "5511999504256";
 const WA = `https://wa.me/${PHONE}?text=${encodeURIComponent("Olá Cristina, gostaria de agendar uma consulta.")}`;
 
+const miniTestimonials = [
+  { quote: "Mudou minha vida. Clareza imediata.", name: "Mariana S." },
+  { quote: "Acolhedora e impressionantemente certeira.", name: "Renata L." },
+];
+
 export function Hero() {
   return (
     <section id="topo" className="relative min-h-dvh flex items-center justify-center overflow-hidden pt-24 pb-16">
@@ -61,6 +66,22 @@ export function Hero() {
             ))}
           </div>
           <span className="tracking-wide">+2.000 vidas transformadas</span>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl w-full mt-4">
+          {miniTestimonials.map((t) => (
+            <figure
+              key={t.name}
+              className="text-left bg-obsidian-soft/50 backdrop-blur-sm border border-gold/15 rounded-sm px-5 py-4"
+            >
+              <blockquote className="text-silk/85 text-sm font-light italic leading-snug">
+                “{t.quote}”
+              </blockquote>
+              <figcaption className="text-[10px] tracking-[0.25em] uppercase text-gold/80 mt-2">
+                — {t.name}
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </div>
     </section>

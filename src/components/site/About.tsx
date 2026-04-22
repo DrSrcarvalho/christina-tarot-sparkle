@@ -1,11 +1,14 @@
-import aboutImg from "@/assets/holistic-hands.jpg";
+import cristinaImg from "@/assets/cristina-portrait.jpg";
+import { useReveal } from "@/hooks/useReveal";
 
 export function About() {
+  const left = useReveal<HTMLDivElement>();
+  const right = useReveal<HTMLDivElement>();
   return (
     <section id="sobre" className="relative py-28 md:py-40 px-6 lg:px-12 overflow-hidden">
       <div className="absolute -left-32 top-1/2 -translate-y-1/2 w-[40vw] h-[40vw] rounded-full bg-ember/5 blur-[120px] pointer-events-none" />
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-        <div className="lg:col-span-5 relative">
+        <div ref={left.ref} className={`lg:col-span-5 relative reveal ${left.visible ? "is-visible" : ""}`}>
           <div className="aspect-[3/4] w-full max-w-[440px] p-3 border border-gold/15 relative">
             <span className="absolute top-0 left-0 w-3 h-3 border-t border-l border-gold/60" />
             <span className="absolute top-0 right-0 w-3 h-3 border-t border-r border-gold/60" />
@@ -13,12 +16,12 @@ export function About() {
             <span className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-gold/60" />
             <div className="w-full h-full overflow-hidden bg-obsidian-soft">
               <img
-                src={aboutImg}
-                alt="Mãos segurando esfera de cristal com chama"
+                src={cristinaImg}
+                alt="Cristina Patricia Russo - Terapeuta Holística e Tarot Cigano"
                 loading="lazy"
-                width={1280}
-                height={960}
-                className="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-1000"
+                width={896}
+                height={1184}
+                className="w-full h-full object-cover hover:scale-105 transition-all duration-1000"
               />
             </div>
           </div>
@@ -28,7 +31,7 @@ export function About() {
           </div>
         </div>
 
-        <div className="lg:col-span-7 lg:pl-8">
+        <div ref={right.ref} className={`lg:col-span-7 lg:pl-8 reveal reveal-delay-1 ${right.visible ? "is-visible" : ""}`}>
           <div className="flex items-center gap-4 mb-6">
             <span className="w-10 h-px bg-gold/60" />
             <span className="text-[11px] tracking-[0.3em] uppercase text-gold">Quem é Cristina</span>
