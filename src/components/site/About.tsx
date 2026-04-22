@@ -1,4 +1,4 @@
-import cristinaImg from "@/assets/cristina-portrait.jpg";
+import aboutImg from "@/assets/holistic-hands.jpg";
 import { useReveal } from "@/hooks/useReveal";
 
 export function About() {
@@ -16,12 +16,12 @@ export function About() {
             <span className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-gold/60" />
             <div className="w-full h-full overflow-hidden bg-obsidian-soft">
               <img
-                src={cristinaImg}
-                alt="Cristina Patricia Russo - Terapeuta Holística e Tarot Cigano"
+                src={aboutImg}
+                alt="Mãos segurando esfera de cristal — símbolo da prática holística"
                 loading="lazy"
-                width={896}
-                height={1184}
-                className="w-full h-full object-cover hover:scale-105 transition-all duration-1000"
+                width={1280}
+                height={960}
+                className="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-1000"
               />
             </div>
           </div>
