@@ -40,7 +40,7 @@ export function TarotSection() {
             {[
               "Leitura completa de 36 cartas",
               "Respostas objetivas e diretas",
-              "Sessões presenciais ou online",
+              "Sessões 100% online",
               "Atendimento sigiloso e acolhedor",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
