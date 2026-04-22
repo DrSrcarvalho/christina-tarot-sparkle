@@ -74,13 +74,22 @@
 
 :root {
   --radius: 0.5rem;
-  --obsidian: oklch(0.12 0.012 30);
-  --obsidian-soft: oklch(0.17 0.018 30);
-  --ember: oklch(0.62 0.18 38);
-  --flame: oklch(0.72 0.19 45);
-  --crimson: oklch(0.28 0.12 25);
-  --silk: oklch(0.97 0.015 70);
-  --gold: oklch(0.78 0.10 80);
+  /* Paleta: Bordô & Rosé Dourado
+   * Nomes mantidos por compatibilidade, mas remapeados:
+   * obsidian       -> bordô profundo (background principal)
+   * obsidian-soft  -> vinho aveludado (cards/superfícies)
+   * ember/flame    -> rosé dourado (acentos quentes)
+   * crimson        -> bordô intermediário (glows)
+   * silk           -> marfim quente (texto)
+   * gold           -> dourado champanhe (detalhes finos)
+   */
+  --obsidian: oklch(0.18 0.05 15);
+  --obsidian-soft: oklch(0.24 0.07 15);
+  --ember: oklch(0.72 0.13 25);
+  --flame: oklch(0.80 0.11 35);
+  --crimson: oklch(0.32 0.12 18);
+  --silk: oklch(0.97 0.015 75);
+  --gold: oklch(0.83 0.09 75);
 
   --background: var(--obsidian);
   --foreground: var(--silk);
@@ -116,9 +125,9 @@
   --sidebar-ring: var(--ember);
 
   --gradient-ember: radial-gradient(ellipse at bottom center, oklch(0.28 0.12 25) 0%, transparent 70%);
-  --gradient-glow: radial-gradient(ellipse at top right, oklch(0.62 0.18 38 / 0.15), transparent 60%);
-  --shadow-ember: 0 0 60px -15px oklch(0.72 0.19 45 / 0.5);
-  --shadow-card: 0 8px 30px oklch(0 0 0 / 0.6);
+  --gradient-glow: radial-gradient(ellipse at top right, oklch(0.72 0.13 25 / 0.18), transparent 60%);
+  --shadow-ember: 0 0 60px -15px oklch(0.80 0.11 35 / 0.5);
+  --shadow-card: 0 8px 30px oklch(0.10 0.04 15 / 0.6);
 }
 
 .dark {
