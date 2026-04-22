@@ -1,14 +1,18 @@
 import tarotImg from "@/assets/tarot-cards.jpg";
+import tarotTrio from "@/assets/tarot-trio.png";
+import { useReveal } from "@/hooks/useReveal";
 
 const PHONE = "5511999504256";
 const WA = `https://wa.me/${PHONE}?text=${encodeURIComponent("Olá Cristina, quero agendar uma leitura de Tarot Cigano.")}`;
 
 export function TarotSection() {
+  const img = useReveal<HTMLDivElement>();
+  const txt = useReveal<HTMLDivElement>();
   return (
     <section id="tarot" className="relative py-28 md:py-40 px-6 lg:px-12 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,var(--ember)_0%,transparent_50%)] opacity-[0.06] pointer-events-none" />
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div className="lg:order-2 relative">
+        <div ref={img.ref} className={`lg:order-2 relative reveal ${img.visible ? "is-visible" : ""}`}>
           <div className="relative aspect-[4/3] w-full overflow-hidden border border-gold/15 group">
             <img
               src={tarotImg}
@@ -19,10 +23,18 @@ export function TarotSection() {
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-obsidian/60 to-transparent" />
+            <img
+              src={tarotTrio}
+              alt="Trio de cartas do Baralho Cigano"
+              loading="lazy"
+              width={1024}
+              height={768}
+              className="absolute -bottom-6 -left-6 w-[55%] max-w-[280px] drop-shadow-[0_15px_40px_rgba(0,0,0,0.5)] rotate-[-6deg] hover:rotate-0 transition-transform duration-700"
+            />
           </div>
         </div>
 
-        <div className="lg:order-1">
+        <div ref={txt.ref} className={`lg:order-1 reveal reveal-delay-1 ${txt.visible ? "is-visible" : ""}`}>
           <div className="flex items-center gap-4 mb-6">
             <span className="w-10 h-px bg-gold/60" />
             <span className="text-[11px] tracking-[0.3em] uppercase text-gold">Tradição Romani</span>

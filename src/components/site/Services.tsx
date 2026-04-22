@@ -1,4 +1,5 @@
 import { Sparkles, Heart, Moon, Flame, Leaf, Eye } from "lucide-react";
+import { useReveal } from "@/hooks/useReveal";
 
 const services = [
   { icon: Sparkles, title: "Tarot Cigano", desc: "Leitura tradicional do Baralho Cigano para revelar o que está oculto e orientar decisões." },
@@ -10,10 +11,12 @@ const services = [
 ];
 
 export function Services() {
+  const head = useReveal<HTMLDivElement>();
+  const grid = useReveal<HTMLDivElement>();
   return (
     <section id="servicos" className="relative py-28 md:py-40 px-6 lg:px-12 bg-obsidian-soft/40">
       <div className="max-w-[1280px] mx-auto">
-        <div className="max-w-2xl mx-auto text-center mb-16 md:mb-20">
+        <div ref={head.ref} className={`max-w-2xl mx-auto text-center mb-16 md:mb-20 reveal ${head.visible ? "is-visible" : ""}`}>
           <div className="flex items-center justify-center gap-4 mb-5">
             <span className="w-10 h-px bg-gold/60" />
             <span className="text-[11px] tracking-[0.3em] uppercase text-gold">O que ofereço</span>
@@ -24,7 +27,7 @@ export function Services() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gold/10 border border-gold/10">
+        <div ref={grid.ref} className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gold/10 border border-gold/10 reveal reveal-delay-1 ${grid.visible ? "is-visible" : ""}`}>
           {services.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
