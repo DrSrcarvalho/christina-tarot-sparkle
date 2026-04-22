@@ -11,7 +11,7 @@ export function Footer() {
           </div>
           <div className="hidden md:block w-[1px]" />
         </div>
-        <div className="text-[10px] tracking-[0.2em] uppercase text-silk/30">
+        <div className="text-[8px] tracking-[0.15em] uppercase text-silk/20 font-light">
           Desenvolvido por Sebastião Carvalho
         </div>
       </div>
